@@ -1,3 +1,3 @@
-FROM node:14-alpine
+FROM python:3.7-alpine
 
-RUN apk add -U subversion
+CMD [ "python", "-c", "print('Hi there!'"]

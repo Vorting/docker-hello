@@ -1,9 +1,3 @@
-FROM python:3.6
+FROM node:14-alpine
 
-RUN mkdir -p /usr/src/app/
-
-WORKDIR /usr/src/app/
-
-COPY . /usr/src/app/
-
-CMD ["python", "app.py"]
+RUN apk add -U subversion

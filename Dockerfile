@@ -1,3 +1,19 @@
-FROM python:3.7-alpine
-
-CMD [ "python", "-c", "print('Hi there!'"]
+pipeline {
+  agent { label "master"}
+  stages {
+    stage ("build") {
+      steps {
+        sh """
+        docker build -t hello_there .
+        """
+      }
+    }
+    stage ("run") {
+    steps {
+      sh """
+        docker run --rm hello_there
+      """
+      }
+    }
+  }
+}

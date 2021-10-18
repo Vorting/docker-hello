@@ -1,0 +1,11 @@
+pipeline:
+        library: "docker-demo@master"
+        agent:
+                docker: "node:14-alpine"
+                stages:
+                        - stage: Example
+                          steps:
+                                  - echo "Example" \
+                                    hello_there()
+                
+

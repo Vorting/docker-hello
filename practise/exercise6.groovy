@@ -1,6 +1,6 @@
 import groovy.json.JsonSlurper
 
-String filePath = "/home/vorting/Documents/pluralsight/automating-jenkins-groovy/02/demos/music.json"
+String filePath = "/home/vorting/automatingJenkinsWithGroovy/vars/music.json"
 
 def jsonSlurper = new JsonSlurper()
 ArrayList data = jsonSlurper.parse(new File(filePath))
